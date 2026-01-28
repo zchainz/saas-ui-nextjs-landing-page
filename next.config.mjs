@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  optimizeFonts: true,
+  swcMinify: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
