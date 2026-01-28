@@ -1,62 +1,79 @@
-# Saas UI - Next.js - landing page.
+# FIRE Clip Machine - Landing Page
 
-This is a free Next.js landing page template based on https://saas-ui.dev.
-Feel free to submit any feature requests. If you use this template please share what you've built [on Twitter](https://twitter.com/saas_js) 🚀.
+A modern, conversion-focused landing page for FIRE Clip Machine - the specialized AI repurposer for personal finance and FIRE podcasters.
 
-**[View demo](https://saas-ui-nextjs-landing-page.netlify.app/)**
+## Tech Stack
 
-## Tech
+- **Framework:** Next.js 14 (App Router)
+- **Styling:** Tailwind CSS v3.4
+- **UI Components:** shadcn/ui (Radix UI primitives)
+- **Icons:** Lucide React
+- **Theme:** next-themes for dark mode support
+- **TypeScript:** Full type safety
 
-- Next.js (App router)
-- Chakra UI
-- Saas UI
-- Typescript
+## Color Palette
+
+- **Primary:** Deep Blue (#1E3A8A)
+- **Accent:** Green (#10B981)
+- **Neutrals:** Grays and white
+- **Dark mode compatible**
 
 ## Features
 
-- Feature blocks
-- Testimonials
-- Pricing tables
-- Log in and Sign up pages
-- FAQ
+### Landing Page Components
+
+1. **Navbar** - Sticky navigation with dark mode toggle
+2. **Hero Section** - High-impact hero with gradient background
+3. **Features Section** - 4-card grid highlighting key features
+4. **Demo/How It Works** - 4-step process visualization
+5. **Pricing Section** - 3-tier pricing comparison
+6. **Footer** - Clean footer with links
+
+### Auth Pages
+
+- **Login Page** - Clean sign-in form
+- **Signup Page** - Registration with 14-day trial messaging
 
 ## Getting Started
 
-First, clone this repo and run `pnpm i`
-
-To start the app run:
+### Install Dependencies
 
 ```bash
-pnpm dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run Development Server
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev
+```
 
-## Configuration
+Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 
-Configuration files to edit basic site information, add testimonials, faq and pricing table can be found in `/data`.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+```
 
-Find out more about Saas UI.
+### Start Production Server
 
-- [Saas UI Documentation](https://saas-ui.dev/docs).
+```bash
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## SEO Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The landing page includes comprehensive SEO metadata optimized for FIRE and personal finance podcast creators.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Design Principles
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Clean & Professional:** No bloat, fast-loading, conversion-focused
+- **Mobile-First:** Responsive design with appropriate breakpoints
+- **Dark Mode:** Full dark mode support with smooth transitions
+- **Accessibility:** Built on Radix UI primitives for ARIA compliance
+- **Type Safety:** Full TypeScript coverage
 
 ## License
 
-MIT
+All rights reserved © 2026 FIRE Clip Machine

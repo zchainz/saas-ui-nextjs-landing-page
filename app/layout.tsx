@@ -1,12 +1,38 @@
-import { ColorModeScript, theme } from '@chakra-ui/react'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-import { Provider } from './provider'
+const inter = Inter({ subsets: ["latin"] });
 
-export default function Layout(props: { children: React.ReactNode }) {
-  const colorMode = theme.config.initialColorMode
+export const metadata: Metadata = {
+  title: "FIRE Clip Machine – AI Repurposing for Personal Finance Podcasters",
+  description:
+    "Turn your FIRE podcast episodes into compliant, viral clips automatically. Built for personal finance creators with AI-powered compliance guardrails.",
+  keywords: [
+    "FIRE",
+    "personal finance",
+    "podcast repurposing",
+    "AI content creation",
+    "compliance",
+    "social media clips",
+  ],
+  authors: [{ name: "FIRE Clip Machine" }],
+  openGraph: {
+    title: "FIRE Clip Machine – AI Repurposing for Personal Finance Podcasters",
+    description:
+      "Turn your FIRE podcast episodes into compliant, viral clips automatically.",
+    type: "website",
+  },
+};
 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" data-theme={colorMode} style={{ colorScheme: colorMode }}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -27,10 +53,16 @@ export default function Layout(props: { children: React.ReactNode }) {
         />
         <link rel="manifest" href="/static/favicons/manifest.json" />
       </head>
-      <body className={`chakra-ui-${colorMode}`}>
-        <ColorModeScript initialColorMode={colorMode} />
-        <Provider>{props.children}</Provider>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
