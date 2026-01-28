@@ -63,7 +63,7 @@ export function Navbar() {
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </Button>
-            <Link href="/login">
+            <Link href="/sign-in">
               <Button variant="outline">Sign In</Button>
             </Link>
           </div>
@@ -103,7 +103,7 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link href="/login" onClick={() => setIsOpen(false)}>
+            <Link href="/sign-in" onClick={() => setIsOpen(false)}>
               <Button variant="outline" className="w-full">
                 Sign In
               </Button>

@@ -31,7 +31,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link href="/signup">
+            <Link href="/sign-up">
               <Button size="xl" className="bg-primary-800 hover:bg-primary-700 text-white">
                 Start 14-Day Free Trial
               </Button>

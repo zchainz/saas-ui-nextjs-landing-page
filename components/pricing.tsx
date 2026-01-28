@@ -115,7 +115,7 @@ export function Pricing() {
               </CardContent>
 
               <CardFooter>
-                <Link href="/signup" className="w-full">
+                <Link href="/sign-up" className="w-full">
                   <Button
                     className={`w-full ${
                       plan.popular
