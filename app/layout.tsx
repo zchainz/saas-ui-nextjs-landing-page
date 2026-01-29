@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -55,17 +54,15 @@ export default function RootLayout({
         <link rel="manifest" href="/static/favicons/manifest.json" />
       </head>
       <body className={inter.className}>
-        <ClerkProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-            forcedTheme={undefined}
-          >
-            {children}
-          </ThemeProvider>
-        </ClerkProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+          forcedTheme={undefined}
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
